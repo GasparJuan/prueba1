@@ -1,0 +1,170 @@
+
+* {
+    margin: 0; /*SAcamos margen*/
+    padding: 0; /* sacamos padding */
+    box-sizing: border-box; /*aplicamos border box*/
+    font-family: 'Poppins', sans-serif; /*le damos fuente a la pagina*/
+}
+
+
+/**************SECTION**********************************************/
+section {
+    position: relative; /*a todas las secciones de la pagina vamos a aplicarle una posicion relativa*/
+    width: 100%; /*todas las secciones van a ocupar un 100% del ancho de la web*/
+    min-height: 100vh; /*VER COMO CAMBIA ESTO*/
+    padding: 100px;  /*le damos padding a toda las secciones por 100px por igual*/
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*********************EMPIEZA EL HEADER ********************************************/
+header {
+    position: absolute; /*pasamos a posicicion absolute asi lo guiamos arriba al principio*/
+    top: 0px; /*se fue para arriba de todo*/
+    left: 0px; /*se fue a la izquierda pegado*/
+    width: 100%; /*que ocupe todo el ancho de la pagina arriba para armar el nav*/
+    padding: 20px 100px; /*le damos 20px de padding con el tope de arriba, y 100px a los costados asi se nivela con el section*/
+    display: flex;
+    justify-content: space-between; /*AL DARLE SP SE SEPARA DE AMBOS LADOS DE LA DIV, POR UN LADO LA IMG Y POR OTRO LA LISTA*/
+    align-items: center;
+}
+header .logo {
+    position: relative; /*damos posicion */
+    max-width: 80px; /**VER PORQUE EL MAX **/
+}
+
+header ul { /**LA LISTA DE LINKS **/
+    position: relative;  
+    display: flex; /*con esto ordeamos la lista para que se pongan en horizontal */
+}
+
+header ul li { /** LE SACAMOS LOS PUNTOS A LAS LISTAS **/
+    list-style: none;
+}
+
+header ul li a {  /**LINKS **/
+    display: inline-block;  /*LE DAMOS PROPIEDAD DE INLINEBLOCK PARA AJUSTAR MEDIDAS*/
+    color: #333;
+    font-weight: 400; /*le damos tono negrita*/
+    margin-left: 40px; /*con esto separamos cada link entre ellos sin usar display flex*/
+    text-decoration: none; /*le sacamos lo subrayado a los links */
+    
+}
+
+/**********************************TERMINA EL HEADER Y SE ABRE UN DIV AUN EN LA SECCION 
+(RECORDAR QUE LA SECCION TIENE FLEX)*************/
+
+/** SE ABRE EL DIV CONTENTO QUE TIENE EL TEXTO HEADER Y LA IMAGEN DEL VASO GIGANTE **/
+
+.content { /*ESTA ES LA CAJA QUE CONTIENE LOS TITULOS Y EL VASO*/
+    position: relative; 
+    width: 100%; /*LE DAMOS QUE OCUPE TODO EL ANCHO*/
+    display: flex; /*LE DAMOS FLEX CON SP Y AIC PARA SEPARAR LA CAJA TEXTO DE LA CAJA IMG */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/***AHORA VAMOS EN ESPECIFICO CON CADA CAJA EN PARTICULAR, LA CAJA TEXTO Y LA CAJA IMG **/
+
+.content .textBox {
+    position: relative; 
+    max-width: 600px; /**SUPONGO QUE DEBE SER PARA PANTALLAS ALTAS, BUSCAR **/
+}
+
+.content .text h2 { /* le damos estilo al titulo principal */
+    color: #333; /*color al texto*/
+    font-size: 4em; /**investigar el em */
+    line-height: 1.4em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.content .textBox h2 span { /*le damos estilo a la palabra starbucks */
+    color: #017143; /*color verde de starbucks */
+    font-size: 1.2em; /* le damos un 1.2em mas que el texto de arriba */ 
+    font-weight: 900; /*le damos un bold de 900 para darle mas gruesito */
+}
+
+.content .textBox p { /*estilizamos el parrafo debajo del titlo */
+    color: #333;
+}
+
+.content .textBox a { /*estilizamos el link debajo del parrafo */ 
+    display: inline-block; /*le damos esta propiedad para estilizar el link */
+    margin-top: 50px; /*lo separamos del parrafo de arriba */
+    text-decoration: none; /*le saco la linea de abajo del link */
+    background: #017143; /**le doy un background color starbucks para estilizarlo como boton en las linas que siguen **/
+    padding: 8px 20px; /**le doy grosor y altura al boton casero **/ 
+    color: #fff; /**le doy color a la letra para que se vea mejor **/
+    border-radius: 40px; /**le damos un estilo mas redondo **/ 
+    font-weight: 500;
+    letter-spacing: 1px; /**le damos espaciado a las letras */
+
+}
+
+/********************************************************************************************************/
+
+.content .imgBox { /**ACA ESTOY ESTILIZANDO LA CAJA, NO LA IMAGEN, NO CONFUNDIR **/
+    width: 600px; /**no cambio nada **/
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-top: 50px; /**EL ORIGINAL ERA MARGINTOP PERO QUIERO PROBAR ESTO **/ 
+
+}
+.content .imgBox img { /*imagen del vaso aca retocamos la imagen en si, no la caja como el codigo anterior*/
+    max-width: 340px; /*achicamos un poco la imagen */
+}
+
+/******************************* ACA EMPIEZA A RETOCAR EL THUMB, AVERIGUAR PORQUE ESTA AL LADO *****/
+
+.thumb {
+    position: absolute; /*lo mandamos a la punta izquierda del div padre (section) */
+    left: 50%; /*lo ponemos a la mitad de la pantalla */
+    bottom: 20px; /*lo movemos para arriba */
+    transform: translateX(-50%); /**AVERIGUAR ESTE ESTILO **/ /**va de la mano con el hover **/
+    display: flex;
+
+}
+
+.thumb li {
+    list-style: none;
+    display: inline-block; /*LE DAMOS ESTILO A LOS LINKS */
+    margin: 0 20px; /*SEPARAMOS CADA FOTO */
+    cursor: pointer ; /*LE DAMOS PARA QUE APAREZCA EL DEDO EN EL CLICK */
+    transition: 0.5s; /** PARA QUE SE MUEVA A LOS 0.5 PARA ARRIBA**/ 
+}
+
+.thumb li:hover {
+    transform: translateY(-15px); /**PARA QUE SE MUEVA PA ARRIBA POR ESO Y **/
+}
+
+.thumb li img {
+    max-width: 60px;
+}
+
+.sci {
+    position: absolute;
+    top: 50%; /*de arriba que esten a la mitad */
+    right: 30px; /*de la pared derecha este solo a 30px*/
+    transform: translateY(-50%); /*para que vaya pa arriba */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci a {
+    display: inline-block;
+    margin: 5px 0;
+    
+}

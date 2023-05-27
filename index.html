@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <section> <!-- SE LE DIO DISPLAY FLEX PERO AL TENER UN SOLO HIJO NO LOS ACOMODO, EL HIJO ES SOLO EL HEADER -->
+        <header> <!-- SE LE DIO DISPLAY FLEX PARA ACOMODAR A LOS HIJOS, EN ESTE CASO LA IMAGEN LOGO Y LA LISTA DE LINKS-->
+            <a href="#"> 
+                <img src="logo.png" class="logo" alt="logotipo">
+            </a>
+            <ul>
+                <li> <a href="#"> Inicio</a></li>
+                <li> <a href="#"> Menu </a></li>
+                <li> <a href="#"> Nosotros </a></li>
+                <li> <a href="#"> Contacto </a></li>
+            </ul>
+        </header>
+            <!--ACA EMPIEZA TODO EL RELLENO DE LA PARTE DE ABAJO DEL NAV,
+            Y SE ABRE UNA CAJA CON DOS CAJAS MAS, UNA TIENE EL TEXTBOX OSEA LA CAJA
+            CON EL TITUTLO Y EL PARRAFO Y LA OTRA CAJA SE LLAMA IMGBOX CON LA IMAGEN.
+            AMBAS ESTAN SEPARAS CON UN FLEXBOX S-P -->
+        <div class="content"> 
+            <div class="textBox">
+                <h2>It's not just Coffee <br> It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e</p>
+                <a href="#">Leer más</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" alt="" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li> <img src="thumb1.png" alt=""> </li>
+            <li> <img src="thumb2.png" alt=""> </li>
+            <li> <img src="thumb3.png" alt=""> </li>
+        </ul>
+        <ul class="sci">
+            <li><a href=""><img src="facebook.png" alt=""></a></li>
+            <li><a href=""><img src="twitter.png" alt=""></a></li>
+            <li><a href=""><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+</body>
+</html>
+
+<!-- 10:47 min de video -->
