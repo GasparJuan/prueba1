@@ -181,4 +181,4 @@ header ul li a {  /**LINKS **/
  height: 100%;
  background: #017143;
  clip-path: circle(600px at right 800px); /**DEFINE QUE PARTE DEL DIV SE VA A VISUALIZAR EL PRIMERO ES EL TAMAÑO DEL CIRCULO EXISTEN GENERADORES ONLINE DE ESTE STYLE **/
- /* clip-path: circle(50% at 85% 100%);} */
+}
